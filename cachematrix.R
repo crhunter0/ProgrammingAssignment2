@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These 2 functions combine to allow you find the inverse of a matrix and store it
+## in memory cache to allow for faster retrieval if same inverse is called for later.
 
-## Write a short comment describing this function
+## makeCacheMatrix creates an object containing get/set functions. setinverse and
+## getinverse set or get the inverse of the matrix in i.  get and set are used to 
+## retrieve and store the matrix in x.
 
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
@@ -18,7 +20,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve receives an argument of the makeCacheMatrix object.  It will return
+## the inverse of the matrix in that object.  In doing so, it will determine if
+## the inverse can be pulled from memory or must ber calculated.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
